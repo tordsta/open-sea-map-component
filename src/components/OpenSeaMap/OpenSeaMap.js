@@ -12,10 +12,6 @@ class OpenSeaMap extends Component {
     render() {
         return (
             <div>
-                <Alert variant="primary">
-                    This is a alert — check it out!
-                </Alert>
-
                 <iframe
                     width="425"
                     height="350"
