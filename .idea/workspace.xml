@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8be0307-0735-46d7-aec8-e2b172dcbf71" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/GoogleMaps/GoogleMapsWrapper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GoogleMaps/GoogleMaps.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GoogleMaps/GoogleMaps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/GoogleMaps/GoogleMaps.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/google-maps/GoogleMaps.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GoogleMaps/GoogleMaps.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/google-maps/GoogleMapsSelectiveMarker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GoogleMaps/GoogleMapsWrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/google-maps/GoogleMapsCore.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +21,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/App.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="16" selection-start-line="14" selection-end-line="16" />
+                <state relative-caret-position="90">
+                  <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -29,10 +31,10 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/components/GoogleMaps/GoogleMaps.js">
+            <entry file="file://$PROJECT_DIR$/src/components/google-maps/GoogleMapsSelectiveMarker.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="690">
-                  <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+                <state relative-caret-position="-45">
+                  <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
                   </folding>
@@ -41,7 +43,7 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/cypress/integration/GoogleMaps/GoogleMaps.spec.js">
+            <entry file="file://$PROJECT_DIR$/cypress/integration/google-maps/GoogleMaps.spec.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="105">
                   <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
@@ -78,10 +80,10 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/components/GoogleMaps/GoogleMapsWrapper.js">
+            <entry file="file://$PROJECT_DIR$/src/components/google-maps/GoogleMapsCore.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="13" selection-start-line="13" selection-end-line="13" />
+                <state relative-caret-position="165">
+                  <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
                   </folding>
@@ -112,9 +114,13 @@
         <option value="$PROJECT_DIR$/src/components/OpenSeaMap/OpenSeaMap.js" />
         <option value="$PROJECT_DIR$/cypress/integration/GoogleMaps/GoogleMaps.spec.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/components/GoogleMaps/GoogleMapsWrapper.js" />
         <option value="$PROJECT_DIR$/src/components/GoogleMaps/GoogleMaps.js" />
+        <option value="$PROJECT_DIR$/src/components/GoogleMaps/GoogleMapsWrapper.js" />
+        <option value="$PROJECT_DIR$/src/components/google-maps/GoogleMapsWrapper.js" />
+        <option value="$PROJECT_DIR$/src/components/google-maps/GoogleMaps.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/components/google-maps/GoogleMapsSelectiveMarker.js" />
+        <option value="$PROJECT_DIR$/src/components/google-maps/GoogleMapsCore.js" />
       </list>
     </option>
   </component>
@@ -154,7 +160,7 @@
               <item name="open-sea-map-component" type="462c0819:PsiDirectoryNode" />
               <item name="cypress" type="462c0819:PsiDirectoryNode" />
               <item name="integration" type="462c0819:PsiDirectoryNode" />
-              <item name="GoogleMaps" type="462c0819:PsiDirectoryNode" />
+              <item name="google-maps" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="open-sea-map-component" type="b2602c69:ProjectViewProjectNode" />
@@ -177,7 +183,14 @@
               <item name="open-sea-map-component" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="GoogleMaps" type="462c0819:PsiDirectoryNode" />
+              <item name="google-maps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="open-sea-map-component" type="b2602c69:ProjectViewProjectNode" />
+              <item name="open-sea-map-component" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="OpenSeaMap" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -189,7 +202,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553776998055" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553782056727" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -230,12 +243,12 @@
       <workItem from="1553510950100" duration="4876000" />
       <workItem from="1553616988455" duration="34000" />
       <workItem from="1553712293310" duration="6444000" />
-      <workItem from="1553765831065" duration="9358000" />
+      <workItem from="1553765831065" duration="13766000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24969000" />
+    <option name="totallyTimeSpent" value="29377000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="24" width="1926" height="1058" extended-state="7" />
@@ -323,7 +336,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cypress/integration/GoogleMaps/GoogleMaps.spec.js">
+    <entry file="file://$PROJECT_DIR$/cypress/integration/google-maps/GoogleMaps.spec.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
@@ -343,30 +356,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/GoogleMaps/GoogleMapsWrapper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="14" selection-end-line="16" />
+        <state relative-caret-position="90">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/GoogleMaps/GoogleMaps.js">
+    <entry file="file://$PROJECT_DIR$/src/components/google-maps/GoogleMapsSelectiveMarker.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="-45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/google-maps/GoogleMapsCore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

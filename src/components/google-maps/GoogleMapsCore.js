@@ -8,33 +8,22 @@ import {GoogleMap, Marker, withGoogleMap, withScriptjs} from "react-google-maps"
 
 // Import Selectors
 
-class GoogleMapsWrapper extends Component {
+class GoogleMapsCore extends Component {
 
-    handleClick = (event) => {
-        console.log("coordinates", event.latLng.lat(), event.latLng.lng());
-        this.props.selectPos(event.latLng.lat(), event.latLng.lng());
-    };
+    //TODO implement map load only one time, with cache, implement component lifecycle?
 
     render() {
         const GoogleMapWrapper = withScriptjs(withGoogleMap((props) =>
             <GoogleMap
                 defaultCenter = { { lat: this.props.displayLatitude, lng: this.props.displayLongitude } }
                 defaultZoom = { this.props.mapZoom }
-                onClick={(e) => this.handleClick(e)}
-            >
-                {
-                    this.props.showMarker &&
-                    <Marker
-                        position={{lat: this.props.selectedLatitude, lng: this.props.selectedLongitude}}
-                        onClick={() => console.log("marker")}
-                    />
-                }
+                onClick={(e) => this.props.handleClick(e)}>
+                {this.props.showMarker &&
                 <Marker
-
-                />
+                    position={{lat: this.props.selectedLatitude, lng: this.props.selectedLongitude}}
+                    onClick={() => console.log("marker")}/>}
             </GoogleMap>
         ));
-
 
         return (
             <div>
@@ -50,7 +39,7 @@ class GoogleMapsWrapper extends Component {
 }
 
 
-GoogleMapsWrapper.propTypes = {
+GoogleMapsCore.propTypes = {
     displayLatitude: PropTypes.number,
     displayLongitude: PropTypes.number,
     mapWidth: PropTypes.number,
@@ -59,7 +48,8 @@ GoogleMapsWrapper.propTypes = {
     googleMapAPIkey: PropTypes.string
 };
 
-GoogleMapsWrapper.defaultProps = {
+//TODO make default prop to handle click
+GoogleMapsCore.defaultProps = {
     displayLatitude: 40.756795,
     displayLongitude: -73.954298,
     mapWidth: 400,
@@ -68,4 +58,4 @@ GoogleMapsWrapper.defaultProps = {
     googleMapAPIkey: "AIzaSyAiufyGAqyyGilVDKJlJI1syVQSbYkqGFY"
 };
 
-export default GoogleMapsWrapper;
+export default GoogleMapsCore;
