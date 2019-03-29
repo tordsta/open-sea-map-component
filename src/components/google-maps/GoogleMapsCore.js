@@ -1,30 +1,31 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {GoogleMap, Marker, withGoogleMap, withScriptjs} from "react-google-maps";
+import {GoogleMap, Marker, Circle, withGoogleMap, withScriptjs} from "react-google-maps";
 
-// Import Components
 
-// Import Actions
+//This is placed outside the class to prevent the map reloading every time an prop updates
+const GoogleMapWrapper = withScriptjs(withGoogleMap((props) =>
+    <GoogleMap
+        defaultCenter = { { lat: props.displayLatitude, lng: props.displayLongitude } }
+        defaultZoom = { props.mapZoom }
+        clickableIcons = { props.clickableIcons }
+        onClick={(e) => props.handleClick(e)}>
+        {props.showMarker &&
+        <Marker
+            position={{lat: props.selectedLatitude, lng: props.selectedLongitude}}
+            onClick={() => console.log("marker")}/>}
+        {/* TODO implement my location on map
+        <Circle
+            center={{ lat: props.displayLatitude, lng: props.displayLongitude }}
+            radius={50}
+        />
+        */}
+    </GoogleMap>
+));
 
-// Import Selectors
 
 class GoogleMapsCore extends Component {
-
-    //TODO implement map load only one time, with cache, implement component lifecycle?
-
     render() {
-        const GoogleMapWrapper = withScriptjs(withGoogleMap((props) =>
-            <GoogleMap
-                defaultCenter = { { lat: this.props.displayLatitude, lng: this.props.displayLongitude } }
-                defaultZoom = { this.props.mapZoom }
-                onClick={(e) => this.props.handleClick(e)}>
-                {this.props.showMarker &&
-                <Marker
-                    position={{lat: this.props.selectedLatitude, lng: this.props.selectedLongitude}}
-                    onClick={() => console.log("marker")}/>}
-            </GoogleMap>
-        ));
-
         return (
             <div>
                 <GoogleMapWrapper
@@ -32,6 +33,7 @@ class GoogleMapsCore extends Component {
                     mapElement = { <div style={{ height: `100%` }} /> }
                     googleMapURL = {"https://maps.googleapis.com/maps/api/js?key=" + this.props.googleMapAPIkey}
                     loadingElement = {<div style={{ height: `100%` }} />}
+                    {...this.props}
                 />
             </div>
         );
@@ -45,17 +47,19 @@ GoogleMapsCore.propTypes = {
     mapWidth: PropTypes.number,
     mapHeight: PropTypes.number,
     mapZoom: PropTypes.number,
-    googleMapAPIkey: PropTypes.string
+    googleMapAPIkey: PropTypes.string,
+    clicableIcons: PropTypes.bool
 };
 
 //TODO make default prop to handle click
 GoogleMapsCore.defaultProps = {
-    displayLatitude: 40.756795,
-    displayLongitude: -73.954298,
+    displayLatitude: 63.4305,
+    displayLongitude: 10.3951,
     mapWidth: 400,
     mapHeight: 400,
     mapZoom: 13,
-    googleMapAPIkey: "AIzaSyAiufyGAqyyGilVDKJlJI1syVQSbYkqGFY"
+    googleMapAPIkey: "AIzaSyAiufyGAqyyGilVDKJlJI1syVQSbYkqGFY",
+    clickableIcons: true
 };
 
 export default GoogleMapsCore;

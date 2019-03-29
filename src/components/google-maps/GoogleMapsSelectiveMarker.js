@@ -2,13 +2,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import GoogleMapsCore from './GoogleMapsCore';
 
-// Import Components
-
-// Import Actions
-
-// Import Selectors
-
-//
 
 class GoogleMapsSelectiveMarker extends Component {
     constructor(props) {
@@ -22,6 +15,8 @@ class GoogleMapsSelectiveMarker extends Component {
         this.handleClick = this.handleClick.bind(this);
     }
 
+
+    //TODO save to redux or context
     selectPosition(event) {
         this.setState({
             showMarker: true,
@@ -35,13 +30,7 @@ class GoogleMapsSelectiveMarker extends Component {
     render(){
         return(
             <GoogleMapsCore
-                mapWidth = {this.props.mapWidth}
-                mapHeight = {this.props.mapHeight}
-                displayLatitude={this.props.displayLatitude}
-                displayLongitude={this.props.displayLongitude}
-                mapZoom={this.props.mapZoom}
-                googleMapAPIkey={this.props.googleMapAPIkey}
-
+                {...this.props}
 
                 showMarker = {this.state.showMarker}
                 selectedLatitude = {this.state.selectedLatitude}
@@ -52,24 +41,24 @@ class GoogleMapsSelectiveMarker extends Component {
     }
 }
 
-//TODO implement default props and proptypes, assume override from called component
-
 GoogleMapsSelectiveMarker.propTypes = {
     displayLatitude: PropTypes.number,
     displayLongitude: PropTypes.number,
     mapWidth: PropTypes.number,
     mapHeight: PropTypes.number,
     mapZoom: PropTypes.number,
-    googleMapAPIkey: PropTypes.string
+    googleMapAPIkey: PropTypes.string,
+    clicableIcons: PropTypes.bool
 };
 
 GoogleMapsSelectiveMarker.defaultProps = {
-    displayLatitude: 40.756795,
-    displayLongitude: -73.954298,
+    displayLatitude: 63.4305,
+    displayLongitude: 10.3951,
     mapWidth: 800,
     mapHeight: 800,
     mapZoom: 13,
-    googleMapAPIkey: "AIzaSyAiufyGAqyyGilVDKJlJI1syVQSbYkqGFY"
+    googleMapAPIkey: "AIzaSyAiufyGAqyyGilVDKJlJI1syVQSbYkqGFY",
+    clickableIcons: false
 };
 
 
